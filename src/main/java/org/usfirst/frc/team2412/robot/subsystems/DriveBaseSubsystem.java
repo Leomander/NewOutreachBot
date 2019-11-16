@@ -1,6 +1,8 @@
 package org.usfirst.frc.team2412.robot.subsystems;
 
 import org.usfirst.frc.team2412.robot.RobotMap;
+import org.usfirst.frc.team2412.robot.commands.DriveCommand;
+
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
@@ -12,7 +14,7 @@ public class DriveBaseSubsystem extends Subsystem{
 	public MecanumDrive driving = RobotMap.driving;
 	@Override
 	protected void initDefaultCommand() {
-		
+		setDefaultCommand (new DriveCommand());
 		
 	}
 	
